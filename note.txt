@@ -1,0 +1,6 @@
+All features to be implemented
+
+1. basic frontend
+   I. > Run row
+   II. > Other action row
+2. Implementing
