@@ -164,7 +164,6 @@ function PerformAction(value) {
 
 
       ShowResult(t1, t2);
-      DeclareResult(t1,t2);
 
       localStorage.setItem("t1", JSON.stringify(t1));
       localStorage.setItem("t2", JSON.stringify(t2));
@@ -185,7 +184,7 @@ function ShowResult(t1, t2) {
    pre_t2.innerText = t2["text_t2"];
    result.appendChild(pre_t1);
    result.appendChild(pre_t2);
-
+   DeclareResult(t1,t2);
 }
 
 function Reset() {
@@ -227,9 +226,25 @@ function DeclareResult(t1,t2){
 
 function HandleDefault(){
    let t1 = JSON.parse(localStorage.getItem("t1")); 
-   let t2 = JSON.parse(localStorage.getItem("t2"));
-   if(t1 || t2){
-      ShowResult(t1,t1);
+   let t2 = JSON.parse(localStorage.getItem("t2")) || {};
+   if (t2["run_t2"] == undefined) {
+      t2["run_t2"] = 0;
+   }
+   if (t2["ball_t2"] == undefined) {
+      t2["ball_t2"] = 0;
+   }
+   if (t2["wicket_t2"] == undefined) {
+      t2["wicket_t2"] = 0;
+   }
+   if (t2["over_t2"] == undefined) {
+      t2["over_t2"] = 0;
+   }
+   if (t2["text_t2"] == undefined) {
+      t2["text_t2"] = "";
+   }
+
+   if(t1){
+      ShowResult(t1,t2);
    }else{
       pre_t1.innerText = "Match is not started yet";
       result.appendChild(pre_t1);
