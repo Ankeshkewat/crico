@@ -4,3 +4,11 @@ All features to be implemented
    I. > Run row
    II. > Other action row
 2. Implementing
+
+* conditions 
+ 1 > team1 won
+     t1 run > t2;
+ 2 > team 2 won
+     t2 run > t2 run 
+ 3 > draw 
+     t1 run == t2 run

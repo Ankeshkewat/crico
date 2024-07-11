@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crico</title>
     <link rel="stylesheet" href="./styles.css">
-   
+
 </head>
 
 <body>
@@ -16,20 +16,25 @@
     </header>
     <div id="container">
         <div>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
+            <p onclick="PerformAction(event.target.innerText)" id="p1">1</p>
+            <p onclick="PerformAction(event.target.innerText)" id="p2">2</p>
+            <p onclick="PerformAction(event.target.innerText)" id="p3">3</p>
+            <p onclick="PerformAction(event.target.innerText)" id="p4">4</p>
+            <p onclick="PerformAction(event.target.innerText)" id="p5">5</p>
+            <p onclick="PerformAction(event.target.innerText)" id="p6">6</p>
         </div>
         <div>
-            <p>Dot Ball</p>
-            <p>Wide Ball</p>
-            <p>Wicket</p>
-            <p>No Ball</p>
+            <p id="dot_ball" onclick="PerformAction(event.target.innerText)">Dot Ball</p>
+            <p id="wide_ball" onclick="PerformAction(event.target.innerText)">Wide Ball</p>
+            <p id="wicket" onclick="PerformAction(event.target.innerText)">Wicket</p>
+            <p id="no_ball" onclick="PerformAction(event.target.innerText)">No Ball</p>
         </div>
+    </div>
+    <div id="result">
+    <button onclick="Reset()">Reset</button>
+        
     </div>
 </body>
 
 </html>
+<script src="./index.js"></script>
