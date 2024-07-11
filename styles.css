@@ -71,10 +71,28 @@ pre{
 }
 
 @media only screen and (max-width:474px){
-    #container>div:first-child{
-        height: 155px;
-    }
+  
     pre{
         font-size: 20px;
     }
+    #container, #result{
+        width: 80%;
+    }
 }
+@media only screen and (max-width:417px){
+    #container, #result{
+        width: 85%;
+    }
+}
+@media only screen and (max-width:395px){
+    #container, #result{
+        width: 95%;
+    }
+}
+@media only screen and (max-width:355px){
+    #container, #result{
+        width: 100%;
+    }
+}
+
+
