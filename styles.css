@@ -20,11 +20,9 @@ header h1 {
     margin-top: 25px;
 }
 #container>div:first-child{
-    /* border: 2px solid blue; */
     height: 90px;
 }
 #container>div:last-child{
-    /* border: 2px solid red; */
     height: 80px;
 }
 #container>div:first-child p{
@@ -60,6 +58,9 @@ header h1 {
 
 pre{
     font-size: 25px;
+    width: 100%;
+    float: left;
+    overflow: auto;
 }
 #result p{
     font-size: 30px;
@@ -69,8 +70,11 @@ pre{
     border: 3px solid green;
 }
 
-@media only screen and (max-width:490px){
+@media only screen and (max-width:474px){
     #container>div:first-child{
         height: 155px;
+    }
+    pre{
+        font-size: 20px;
     }
 }

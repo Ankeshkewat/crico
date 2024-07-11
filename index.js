@@ -195,6 +195,7 @@ function Reset() {
    pre_t1.innerHTML = null;
    pre_t2.innerHTML = null;
    p.innerHTML = null;
+   HandleDefault();
 
 }
 
@@ -225,5 +226,13 @@ function DeclareResult(t1,t2){
 }
 
 function HandleDefault(){
-
+   let t1 = JSON.parse(localStorage.getItem("t1")); 
+   let t2 = JSON.parse(localStorage.getItem("t2"));
+   if(t1 || t2){
+      ShowResult(t1,t1);
+   }else{
+      pre_t1.innerText = "Match is not started yet";
+      result.appendChild(pre_t1);
+   }
 }
+HandleDefault();
